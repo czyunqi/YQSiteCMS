@@ -8,7 +8,7 @@ const webpackConfigDev = {
   mode: 'development',
   output: {
     path: path.resolve(__dirname, './Admin/'),
-    //publicPath: "./",
+    publicPath: "/Admin/",
     filename: 'assets/scripts/[name].[hash:10].js'
   },
   module: {
@@ -36,7 +36,17 @@ const webpackConfigDev = {
     hot: true, // 模块热更新
     liveReload: true, // 检测到文件更改时重新加载
     open: true, // 自动打开浏览器
-    openPage: "index.html"
+    openPage: "Admin/index.html",
+    proxy: {
+      '/admin/api/': {
+        target: 'http://localhost:8512',
+        pathRewrite: {
+          '^/admin/api/': '/src/api/'
+        },
+        changeOrigin: true, // target是域名的话，需要这个参数，
+        secure: false, // 设置支持https协议的代理
+      }
+    }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin() ////热更新模块，这样js改变就不会全部重载，而是只是重载你改过的那一部分

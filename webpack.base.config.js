@@ -6,6 +6,7 @@ const {
 } = require('clean-webpack-plugin')
 const TransferWebpackPlugin = require('transfer-webpack-plugin')
 const PurifyCssWebpack = require('purifycss-webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 //动态添加入口
 var entry = {}
@@ -26,26 +27,26 @@ module.exports = {
   entry: entry,
   module: {
     rules: [{
-      test: /\.css$/,
-      use: [{
-        loader: MiniCssExtractPlugin.loader,
-        options: {
-          //publicPath: "../../"
-        }
+        test: /\.css$/,
+        use: [{
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '/Admin/'
+            }
+          },
+          'css-loader',
+          'postcss-loader'
+        ]
       },
-        'css-loader',
-        'postcss-loader'
-      ]
-    },
-    // 处理字体
-    {
-      test: /\.(woff|woff2|eot|ttf|otf)$/,
-      use: ['url-loader']
-    },
-    {
-      test: /\.ejs$/,
-      loader: 'ejs-loader'
-    }
+      // 处理字体
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ['url-loader']
+      },
+      {
+        test: /\.ejs$/,
+        loader: 'ejs-loader'
+      }
     ]
   },
   resolve: {
@@ -60,6 +61,14 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/css/[name].[hash:10].css'
     }),
+    //复制静态资源
+    new CopyWebpackPlugin([{
+      from: './src/static',
+      to: './static'
+    }, {
+      from: './src/api',
+      to: './api'
+    }])
   ],
   // 配置webpack执行相关
   performance: {

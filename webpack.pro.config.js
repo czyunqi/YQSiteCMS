@@ -24,7 +24,7 @@ const webpackConfigPro = {
         ]
     },
     output: {
-        //publicPath:"/",
+        publicPath: "/Admin/",
         path: path.resolve(__dirname, './Admin/'),
         filename: 'assets/scripts/[name].[hash:10].js'
     },
