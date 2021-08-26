@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>水滴充电云平台</title>
+    <script src="./static/bjui/js/jquery-1.11.3.min.js"></script>
+    <script src="./static/bjui/js/jquery.cookie.js"></script>
+    <link href="./static/bjui/themes/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--[if lte IE 7]>
+        <style type="text/css">
+            #errorie {position: fixed; top: 0; z-index: 100000; height: 30px; background: #FCF8E3;}
+            #errorie div {width: 900px; margin: 0 auto; line-height: 30px; color: orange; font-size: 14px; text-align: center;}
+            #errorie div a {color: #459f79;font-size: 14px;}
+            #errorie div a:hover {text-decoration: underline;}
+        </style>
+        <div id="errorie"><div>您还在使用老掉牙的IE，请升级您的浏览器到 IE8以上版本 <a target="_blank" href="http://windows.microsoft.com/zh-cn/internet-explorer/ie-8-worldwide-languages">点击升级</a>&nbsp;&nbsp;强烈建议您更改换浏览器：<a href="http://down.tech.sina.com.cn/content/40975.html" target="_blank">谷歌 Chrome</a></div></div>
+    <![endif]-->
+
+    <div class="container">
+        <div class="main_box">
+            <form name="login-form" method="post">
+                <p class="text-center logo">水滴充电云平台</p>
+                <div class="login_msg text-center">
+                    <font color="red"></font>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" class="form-control" name="account" value="" placeholder="登录账号">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="password" class="form-control" name="password" placeholder="登录密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+                        <input type="text" class="form-control" name="captcha" placeholder="验证码">
+                        <span class="input-group-addon code"><img id="captcha_img"
+                                src="<%=require('../assets/img/captcha.jpg')%>" alt="点击更换" title="点击更换"
+                                class="m"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label for="j_remember" class="m"><input id="remember" type="checkbox"
+                                value="true">&nbsp;记住登陆账号!</label>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button name="submit-form" type="submit"
+                        class="btn btn-primary btn-lg">&nbsp;登&nbsp;录&nbsp;</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="reset" class="btn btn-default btn-lg">&nbsp;重&nbsp;置&nbsp;</button>
+                </div>
+                <div class="text-center">
+                    <hr>
+                    &copy; 2021 <a href="http://www.sdzh.top/" target="_blank">水滴智汇停车（常州）有限公司</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,8 +1,7 @@
 .gitgnore
-.vscode
+/.vscode/
 /.svn/
 /docs/
-/YQTools/
 /node_modules/
 /temp/
 /test/

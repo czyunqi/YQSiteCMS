@@ -1,0 +1,63 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Verdana", "Tahoma", "Lucida Grande", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  background: url(../assets/img/login-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.form-control {
+  height: 37px;
+}
+
+.main_box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin: -200px 0 0 -180px;
+  padding: 15px 20px;
+  width: 360px;
+  height: 400px;
+  min-width: 320px;
+  background: #FAFAFA;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 1px 5px 8px #888888;
+  border-radius: 6px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.login_msg {
+  height: 30px;
+}
+
+.input-group>.input-group-addon.code {
+  padding: 0;
+}
+
+#captcha_img {
+  cursor: pointer;
+}
+
+.main_box .logo img {
+  height: 35px;
+}
+
+@media (min-width: 768px) {
+  .main_box {
+    margin-left: -240px;
+    padding: 15px 55px;
+    width: 480px;
+  }
+
+  .main_box .logo img {
+    height: 40px;
+  }
+}
