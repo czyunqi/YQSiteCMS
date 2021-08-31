@@ -24,8 +24,8 @@ const webpackConfigPro = {
         ]
     },
     output: {
-        publicPath: "/Admin/",
-        path: path.resolve(__dirname, './Admin/'),
+        publicPath: "/YunQi/",
+        path: path.resolve(__dirname, './YunQi/'),
         filename: 'assets/scripts/[name].[hash:10].js'
     },
     module: {
@@ -36,7 +36,7 @@ const webpackConfigPro = {
                 options: {
                     esModule: false,
                     limit: 10000, // 设置图像大小超过多少转存为单独图片,
-                    publicPath: '/Admin/',
+                    publicPath: '/YunQi/',
                     name: 'assets/img/[name].[hash:10].[ext]' // 转存的图片目录
                 }
             }]

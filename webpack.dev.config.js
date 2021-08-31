@@ -7,8 +7,8 @@ const webpackConfigBase = require('./webpack.base.config')
 const webpackConfigDev = {
   mode: 'development',
   output: {
-    path: path.resolve(__dirname, './Admin/'),
-    publicPath: "/Admin/",
+    path: path.resolve(__dirname, './YunQi/'),
+    publicPath: "/YunQi/",
     filename: 'assets/scripts/[name].[hash:10].js'
   },
   module: {
@@ -19,7 +19,7 @@ const webpackConfigDev = {
         options: {
           esModule: false,
           limit: 500, // 设置图像大小超过多少转存为单独图片,
-          publicPath: '/Admin/',
+          publicPath: '/YunQi/',
           //outputPath: '/',
           name: 'assets/img/[name].[hash:10].[ext]' // 转存的图片目录
         }
@@ -28,7 +28,7 @@ const webpackConfigDev = {
   },
   devtool: '#eval-source-map',
   devServer: {
-    publicPath: "/Admin/",
+    publicPath: "/YunQi/",
     //contentBase: path.join(__dirname, 'local'),
     compress: true,
     port: 3005,
@@ -36,12 +36,12 @@ const webpackConfigDev = {
     hot: true, // 模块热更新
     liveReload: true, // 检测到文件更改时重新加载
     open: true, // 自动打开浏览器
-    openPage: "Admin/index.html",
+    openPage: "YunQi/index.html",
     proxy: {
-      '/admin/api/': {
+      '/api/': {
         target: 'http://localhost:8512',
         pathRewrite: {
-          '^/admin/api/': '/src/api/'
+          '^/api/': '/api/'
         },
         changeOrigin: true, // target是域名的话，需要这个参数，
         secure: false, // 设置支持https协议的代理

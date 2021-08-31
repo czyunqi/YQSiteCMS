@@ -31,7 +31,7 @@ module.exports = {
         use: [{
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '/Admin/'
+              publicPath: '/YunQi/'
             }
           },
           'css-loader',
