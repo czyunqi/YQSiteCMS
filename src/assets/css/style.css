@@ -2,3 +2,11 @@
     color: #777;
     margin-left: 5px;
 }
+
+label {
+    font-weight: normal;
+}
+
+.bjui-row.col-1 .row-label {
+    width: 25%;
+}

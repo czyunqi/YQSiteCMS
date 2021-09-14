@@ -1,4 +1,5 @@
 import '../assets/css/style.css';
+import '../assets/js/public';
 
 var module = {
   data: {},
@@ -25,7 +26,7 @@ var module = {
         height: 240
       }, // 会话超时后弹出登录对话框
       appInfo: {
-        requestUrl: "/admin/api/manager"
+        requestUrl: "/Api/mapi"
         //https://evcs.sdzh.top/wapi/manager/test
       },
       statusCode: {
@@ -70,12 +71,8 @@ var module = {
     console.log(BJUI.appInfo.requestUrl)
 
 
-    $("#bjui-hnav-navbar").append('<li class="active"><a href="' + BJUI.appInfo.requestUrl + '/system/getMenu-site.json" data-toggle="sidenav" data-id-key="targetid">站点</a></li>');
-    $("#bjui-hnav-navbar").append('<li><a href="' + BJUI.appInfo.requestUrl + '/system/getMenu-user.json" data-toggle="sidenav" data-id-key="targetid">用户</a></li>');
-    $("#bjui-hnav-navbar").append('<li><a href="' + BJUI.appInfo.requestUrl + '/system/getMenu-order.json" data-toggle="sidenav" data-id-key="targetid">订单</a></li>');
-    $("#bjui-hnav-navbar").append('<li><a href="' + BJUI.appInfo.requestUrl + '/system/getMenu-money.json" data-toggle="sidenav" data-id-key="targetid">财务</a></li>');
-    $("#bjui-hnav-navbar").append('<li><a href="' + BJUI.appInfo.requestUrl + '/system/getMenu-statis.json" data-toggle="sidenav" data-id-key="targetid">报表</a></li>');
-    $("#bjui-hnav-navbar").append('<li><a href="' + BJUI.appInfo.requestUrl + '/system/getMenu-system.json" data-toggle="sidenav" data-id-key="targetid">系统</a></li>');
+    $("#bjui-hnav-navbar").append('<li class="active"><a href="' + BJUI.appInfo.requestUrl + '/system/config/menu/getMenu.json" data-toggle="sidenav" data-id-key="targetid">站点</a></li>');
+    $("#bjui-hnav-navbar").append('<li><a href="' + BJUI.appInfo.requestUrl + '/system/config/menu/getMenu.json" data-toggle="sidenav" data-id-key="targetid">系统</a></li>');
 
     /*BJUI.ajax('doajax', {
       type: "POST",

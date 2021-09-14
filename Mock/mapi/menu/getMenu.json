@@ -1,0 +1,124 @@
+{
+  "code": 200,
+  "msg": "获取成功",
+  "data": [{
+    "name": "中文站",
+    "children": [{
+      "name": "新闻中心",
+      "children": [{
+        "id": "base-1",
+        "name": "公司新闻",
+        "target": "navtab",
+        "url": "article/list.html"
+      }, {
+        "id": "base-2",
+        "name": "行业新闻",
+        "target": "navtab",
+        "url": "article/list.html"
+      }]
+    }, {
+      "name": "产品中心",
+      "children": [{
+        "id": "base-3",
+        "name": "公司新闻",
+        "target": "navtab",
+        "url": "article/list.html"
+      }, {
+        "id": "base-4",
+        "name": "行业新闻",
+        "target": "navtab",
+        "url": "article/list.html"
+      }]
+    }, {
+      "id": "base-11",
+      "name": "人才招聘",
+      "target": "navtab",
+      "url": "job/list.html"
+    }, {
+      "id": "base-12",
+      "name": "站内留言",
+      "target": "navtab",
+      "url": "feedback/list.html"
+    }, {
+      "id": "base-13",
+      "name": "友情链接",
+      "target": "navtab",
+      "url": "link/list.html"
+    }]
+  }, {
+    "name": "站点管理",
+    "children": [{
+      "id": "base-2",
+      "name": "站点列表",
+      "target": "navtab",
+      "url": "site/siteList.html"
+    }, {
+      "id": "base-2",
+      "name": "栏目管理",
+      "target": "navtab",
+      "url": "site/classList.html"
+    }, {
+      "id": "base-2",
+      "name": "扩展字段",
+      "target": "navtab",
+      "url": "site/fieldList.html"
+    }]
+  }, {
+    "name": "模板管理",
+    "children": [{
+      "id": "base-2",
+      "name": "模板列表",
+      "target": "navtab",
+      "url": "tpl/list.html"
+    }, {
+      "id": "base-2",
+      "name": "生成静态",
+      "target": "navtab",
+      "url": "tpl/create.html"
+    }]
+  }, {
+    "name": "系统用户",
+    "children": [{
+      "id": "base-3",
+      "name": "用户管理",
+      "target": "navtab",
+      "url": "manager/adminList.html"
+    }, {
+      "id": "base-4",
+      "name": "用户分组",
+      "target": "navtab",
+      "url": "manager/groupList.html"
+    }, {
+      "id": "base-5",
+      "name": "角色管理",
+      "target": "navtab",
+      "url": "manager/roleList.html"
+    }]
+  }, {
+    "name": "系统配置",
+    "children": [{
+      "id": "base-6",
+      "name": "菜单管理",
+      "target": "navtab",
+      "url": "menu/list.html"
+    }, {
+      "id": "base-8",
+      "name": "全局配置",
+      "target": "navtab",
+      "url": "config/index.html"
+    }]
+  }, {
+    "name": "系统日志",
+    "children": [{
+      "id": "base-9",
+      "name": "操作日志",
+      "target": "navtab",
+      "url": "log/list.html?logType=1"
+    }, {
+      "id": "base-10",
+      "name": "登录日志",
+      "target": "navtab",
+      "url": "log/list.html?logType=0"
+    }]
+  }]
+}

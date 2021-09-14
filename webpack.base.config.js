@@ -61,6 +61,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/css/[name].[hash:10].css'
     }),
+
     //复制静态资源
     new CopyWebpackPlugin([{
       from: './src/static',

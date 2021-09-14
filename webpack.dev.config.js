@@ -38,10 +38,10 @@ const webpackConfigDev = {
     open: true, // 自动打开浏览器
     openPage: "YunQi/index.html",
     proxy: {
-      '/api/': {
+      '/Api/': {
         target: 'http://localhost:8512',
         pathRewrite: {
-          '^/api/': '/api/'
+          '^/Api/': '/Mock/'
         },
         changeOrigin: true, // target是域名的话，需要这个参数，
         secure: false, // 设置支持https协议的代理

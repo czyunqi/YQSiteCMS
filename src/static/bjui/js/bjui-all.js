@@ -960,7 +960,7 @@
                     var json = response.toJson(), $ajaxMask = $target.find('> .bjui-ajax-mask')
                     
                     if (!json[BJUI.keys.statusCode]) {
-                        $this.empty().html(response).initui()
+                        $this.empty().html(response+'<input type="hidden" name="options.url" value="'+decodeURI(op.url)+'" />').initui()
                     } else {
                         if (json[BJUI.keys.statusCode] == BJUI.statusCode.error) {
                             if (json[BJUI.keys.message]) $this.alertmsg('error', json[BJUI.keys.message])
@@ -3309,6 +3309,7 @@
                             if (BJUI.ui.clientPaging && $dialog.data('bjui.clientPaging')) $dialog.pagination('setPagingAndOrderby', $dialog)
                             
                             tools.resizeBjuiRow($dialog)
+
                         }
                     })
                 } else {

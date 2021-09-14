@@ -1,0 +1,15 @@
+{
+  "code": 200,
+  "msg": "添加成功!",
+  "data": {
+    "id": "113",
+    "isSys": false,
+    "menuName": "价格管理",
+    "menuCode": "system",
+    "menuType": 1,
+    "menuUrl": "",
+    "onShow": true,
+    "parentId": 11,
+    "parentName": "上级菜单名"
+  }
+}

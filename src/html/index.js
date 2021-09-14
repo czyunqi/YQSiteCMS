@@ -19,7 +19,7 @@ var module = {
     that.clickCode();
 
 
-    $("form[name=login-form]").submit(function (e) {
+    $("form[name=formLogin]").submit(function (e) {
       e.preventDefault();
       var issubmit = true;
       var i_index = -1;
